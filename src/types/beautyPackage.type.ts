@@ -9,5 +9,5 @@ export type beautyPackageType = {
   images: string[];
   price: number;
   specialists: specialistType[];
-  bookigs: bookingType[];
+  bookings: bookingType[];
 } & Document;
