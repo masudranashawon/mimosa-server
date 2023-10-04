@@ -6,7 +6,7 @@ import BeautyPackageModel from '../models/beautyPackage.model';
 export default class BeautyPackageController {
   constructor() {}
 
-  // Get all beauty packageg
+  // Get all beauty packages
   public async getAllBeautyPackages(
     req: Request,
     res: Response
