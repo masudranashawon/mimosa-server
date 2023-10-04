@@ -25,7 +25,7 @@ export default class UserController {
 
         res.status(200).json(user);
       });
-    } catch (error) {
+    } catch (error: unknown) {
       await handleError(error, res);
     }
   }
@@ -49,7 +49,7 @@ export default class UserController {
 
         res.status(200).json(user);
       });
-    } catch (error) {
+    } catch (error: unknown) {
       await handleError(error, res);
     }
   }
@@ -83,7 +83,7 @@ export default class UserController {
 
         res.status(200).json(user);
       });
-    } catch (error) {
+    } catch (error: unknown) {
       await handleError(error, res);
     }
   }
@@ -96,7 +96,7 @@ export default class UserController {
 
         res.status(200).json(users);
       });
-    } catch (error) {
+    } catch (error: unknown) {
       await handleError(error, res);
     }
   }
