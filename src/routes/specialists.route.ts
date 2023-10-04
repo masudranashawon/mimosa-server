@@ -23,7 +23,7 @@ specialistsRouter.get(
 
 // Create a specialist
 specialistsRouter.post(
-  '/',
+  '/:bpid',
   authInstance.isAuthenticated,
   authInstance.isAdmin,
   specialistInstance.createASpecialist
