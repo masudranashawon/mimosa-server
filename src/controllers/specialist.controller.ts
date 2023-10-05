@@ -87,12 +87,6 @@ export default class SpecialistController {
         res.status(404).json({ message: 'Specialist not found' });
       }
 
-      if (!name || !designation || !bio || !photoUrl || !dateOfBirth) {
-        throw new Error(
-          'Please provide all the following fields: Name, Designation, Bio, Photo URL, Date of Birth'
-        );
-      }
-
       await Promise.resolve().then(async () => {
         const specialist = await SpecialistModel.findByIdAndUpdate(
           sid,

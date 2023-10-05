@@ -23,7 +23,7 @@ beautyPackageRouter.post(
 
 // Update a beauty package
 beautyPackageRouter.put(
-  '/bpid',
+  '/:bpid',
   authInstance.isAuthenticated,
   authInstance.isAdmin,
   beautyPackageInstance.updateABeautyPackage
@@ -31,7 +31,7 @@ beautyPackageRouter.put(
 
 // Delete a beauty package
 beautyPackageRouter.delete(
-  '/bpid',
+  '/:bpid',
   authInstance.isAuthenticated,
   authInstance.isAdmin,
   beautyPackageInstance.deleteABeautyPackage

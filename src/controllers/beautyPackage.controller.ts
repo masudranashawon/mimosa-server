@@ -84,12 +84,6 @@ export default class BeautyPackageController {
         res.status(404).json({ message: 'Beauty Package not found' });
       }
 
-      if (!title || !description || !category || !images || !price) {
-        throw new Error(
-          'Please provide all the following fields: Title, Description, Category, Images, Price'
-        );
-      }
-
       await Promise.resolve().then(async () => {
         const beautyPackage = await BeautyPackageModel.findByIdAndUpdate(
           bpid,
