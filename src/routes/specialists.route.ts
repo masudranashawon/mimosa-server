@@ -8,18 +8,10 @@ const authInstance = new AuthMiddleware();
 const specialistInstance = new SpecialistController();
 
 // Get all specialists
-specialistsRouter.get(
-  '/',
-  authInstance.isAuthenticated,
-  specialistInstance.getAllSpecialists
-);
+specialistsRouter.get('/', specialistInstance.getAllSpecialists);
 
 // Get a specialist
-specialistsRouter.get(
-  '/:sid',
-  authInstance.isAuthenticated,
-  specialistInstance.getASpecialist
-);
+specialistsRouter.get('/:sid', specialistInstance.getASpecialist);
 
 // Create a specialist
 specialistsRouter.post(
