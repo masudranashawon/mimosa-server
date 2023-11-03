@@ -10,9 +10,9 @@ const specialistsRouter = express_1.default.Router();
 const authInstance = new auth_middleware_1.default();
 const specialistInstance = new specialist_controller_1.default();
 // Get all specialists
-specialistsRouter.get('/', authInstance.isAuthenticated, specialistInstance.getAllSpecialists);
+specialistsRouter.get('/', specialistInstance.getAllSpecialists);
 // Get a specialist
-specialistsRouter.get('/:sid', authInstance.isAuthenticated, specialistInstance.getASpecialist);
+specialistsRouter.get('/:sid', specialistInstance.getASpecialist);
 // Create a specialist
 specialistsRouter.post('/:bpid', authInstance.isAuthenticated, authInstance.isAdmin, specialistInstance.createASpecialist);
 // Update a specialist
